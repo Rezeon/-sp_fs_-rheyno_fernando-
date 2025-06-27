@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧑‍💻 Fullstack Project - Multi-User Project Management App
 
-## Getting Started
+Repository ini merupakan hasil pengerjaan project fullstack untuk submission “Fullstack Sellerpintar” oleh **Rheyno Fernando Velga Wesi Aji**. Aplikasi ini memungkinkan user untuk membuat project, mengundang anggota tim, membuat task, mengubah status task, dan menghapus project/task.
 
-First, run the development server:
+## 🚀 Fitur Utama
+
+- Autentikasi menggunakan JWT
+- Manajemen project:
+  - Buat project
+  - Hapus project (jika owner)
+  - Lihat project milik sendiri dan yang diikuti
+- Manajemen anggota:
+  - Undang user ke dalam project
+  - Hanya owner yang bisa mengundang anggota
+- Task Management:
+  - Buat, lihat, edit (status), dan hapus task
+  - Set assignee dari daftar anggota project
+  - Status: `TODO`, `IN_PROGRESS`, `DONE`
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+### 🔧 Backend
+- Node.js + Express.js
+- Prisma ORM + PostgreSQL
+- JSON Web Token (JWT) untuk autentikasi
+- Next.js API Routes (for SSR-friendly API)
+
+### 🎨 Frontend
+- Next.js App Router (Client Components)
+- Tailwind CSS
+- ShadCN UI Components
+- React Hooks
+
+---
+
+## ⚙️ Cara Menjalankan Project
+
+### 1. Clone Repository
 
 ```bash
+git clone https://github.com/rheynof/sp_fs_rheyno_fernando.git
+cd sp_fs_rheyno_fernando
+
+2. Setup Environment Variables
+Buat file .env berdasarkan .env.example di root folder. Contoh:
+
+env
+
+# .env (untuk backend)
+DATABASE_URL=postgresql://user:password@localhost:5432/nama_database
+JWT_SECRET=your_jwt_secret
+
+# Jika pakai frontend Next.js
+NEXT_PUBLIC_API_URL=http://localhost:3000
+3. Install Dependencies & Jalankan
+Backend (API & Database)
+
+npm install
+npx prisma generate
+npx prisma migrate dev
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frontend (Next.js Client)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+cd app
+npm install
+npm run dev
+Aplikasi akan berjalan di: http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🧪 Fitur Pengujian Manual
+Register & Login User
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create Project
 
-## Learn More
+Invite Member by Email
 
-To learn more about Next.js, take a look at the following resources:
+Create & Assign Tasks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Update Status Task
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Delete Task / Delete Project (Owner Only)
 
-## Deploy on Vercel
+📁 Struktur Folder
+📦 sp_fs_rheyno_fernando
+├── prisma/
+│   ├── schema.prisma
+├── app/ (Next.js)
+│   ├── api/ (API Routes)
+│   ├── projects/
+│   ├── components/
+│   └── ...
+├── .env.example
+├── README.md
+└── ...
+📝 Catatan
+Semua API terlindungi dengan token JWT
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Hanya owner yang dapat menghapus project dan mengundang anggota
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project belum dideploy. Dapat dijalankan secara lokal dengan mengikuti langkah di atas.
+
+👨‍💻 Author
+Rheyno Fernando Velga Wesi Aji
+Email: rheynoternando@gmail.com
+Solo, Indonesia
+
+
+
+
+
+
+
+
