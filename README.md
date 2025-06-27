@@ -2,6 +2,7 @@
 
 Repository ini merupakan hasil pengerjaan project fullstack untuk submission “Fullstack Sellerpintar” oleh **Rheyno Fernando Velga Wesi Aji**. Aplikasi ini memungkinkan user untuk membuat project, mengundang anggota tim, membuat task, mengubah status task, dan menghapus project/task.
 
+
 ## 🚀 Fitur Utama
 
 - Autentikasi menggunakan JWT
