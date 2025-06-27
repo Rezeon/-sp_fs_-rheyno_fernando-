@@ -98,7 +98,7 @@ Semua API terlindungi dengan token JWT
 
 Hanya owner yang dapat menghapus project dan mengundang anggota
 
-Project belum dideploy. Dapat dijalankan secara lokal dengan mengikuti langkah di atas.
+Project sudah dideploy. Dapat dijalankan dan langsung ke halaman /register atau login saja
 
 👨‍💻 Author
 Rheyno Fernando Velga Wesi Aji
